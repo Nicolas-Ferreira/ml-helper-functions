@@ -17,7 +17,7 @@ def build_graph(df, source_column, target_column):
     """
 
     # Graph EDGES
-    df_edge = df[[source_column, source_column]]
+    df_edge = df[[source_column, target_column]]
     df_edge.columns = ['source', 'target']
     df_edge = df_edge[df_edge.source != '']
     df_edge = df_edge[df_edge.target != '']
