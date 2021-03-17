@@ -43,6 +43,8 @@ def retreive_data(sql_qry):
     except:
         df = pd.DataFrame()
 
+    engine.dispose()
+
     return df
 
 
@@ -91,6 +93,8 @@ def save_data(df, schema, table):
         )
     except:
         return False
+
+    engine.dispose()
 
     return True
 
