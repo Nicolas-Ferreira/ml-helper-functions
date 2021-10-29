@@ -40,16 +40,26 @@ key_map = {
     '.': [3,8]
 }
 
+
 # Function to calculate Manhattan distance
 def manhattan(a, b):
     return sum(abs(val1-val2) for val1, val2 in zip(a,b))
+
 
 # Function to caclulate Average from list
 def average(lst):
     return sum(lst) / len(lst)
 
+
 # Function to calculate Keyboard Dispersion on String
 def get_keyboard_dispersion(string):
+
+    """
+    Function to calculate character dispersion from a String
+
+    :param string: string to calculate dispersion ratio
+    :return: dispersion ratio, average distance from characters in string
+    """
    
     list_chars = list(string)
    
